@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Page 3 — Asteroid Characteristics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard — Power BI Pages</h1>
+  <nav>
+    <a href="page1.html">Page 1: Overview</a>
+    <a href="page2.html">Page 2: Explorer</a>
+    <a href="page3.html" class="active">Page 3: Characteristics</a>
+  </nav>
+</header>
+<main>
+  <div class="panel">
+    <h2>Asteroid Characteristics</h2>
+    <p class="muted">Shifts the focus from approach events to the asteroids themselves — what kinds of orbits and sizes exist in the population, independent of any single close pass.</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <h2>Orbital Shape Scatter</h2>
+      <div class="detail-grid">
+        <div class="detail-item"><div class="k">X-axis</div><div class="v">SemiMajorAxis_AU (a)</div></div>
+        <div class="detail-item"><div class="k">Y-axis</div><div class="v">Eccentricity (e)</div></div>
+        <div class="detail-item"><div class="k">Legend</div><div class="v">orbitclass</div></div>
+      </div>
+      <p class="muted" style="margin-top:10px;">Shows how orbit shape (round vs. elongated) differs across Apollo/Amor/Aten/Atira populations.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Orbit Class × Size Band Matrix</h2>
+      <p class="muted">Rows: orbitclass · Columns: size band (grouped Diameter_km) · Values: count of objects, with conditional-formatting background color to read as a heatmap of which orbit/size combinations are most common.</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Top 10 Largest Known Asteroids — Table</h2>
+    <p class="muted">Sorted by Diameter_km descending. Columns: ObjectName, orbitclass, Diameter_km, pha.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Why this page matters</h2>
+    <p class="muted">A close approach only tells you an asteroid passed by — this page tells you what it actually is, physically and orbitally, filling in the "what kind of object are we even tracking" half of the story that Pages 1 and 2 don't cover.</p>
+  </div>
+</main>
+</body>
+</html>

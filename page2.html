@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Page 2 — Close Approach Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard — Power BI Pages</h1>
+  <nav>
+    <a href="page1.html">Page 1: Overview</a>
+    <a href="page2.html" class="active">Page 2: Explorer</a>
+    <a href="page3.html">Page 3: Characteristics</a>
+  </nav>
+</header>
+<main>
+  <div class="panel">
+    <h2>Close Approach Explorer</h2>
+    <p class="muted">The report's advanced, interactive visual — an asteroid-by-asteroid bubble scatter with a live What-If threshold slider, letting a viewer redefine "how close is close" themselves rather than reading a fixed cutoff.</p>
+  </div>
+
+  <div class="panel">
+    <h2>Main visual — Scatter Chart</h2>
+    <div class="detail-grid">
+      <div class="detail-item"><div class="k">X-axis</div><div class="v">Distance_LD</div></div>
+      <div class="detail-item"><div class="k">Y-axis</div><div class="v">Velocity_kms</div></div>
+      <div class="detail-item"><div class="k">Size</div><div class="v">Diameter_m</div></div>
+      <div class="detail-item"><div class="k">Legend</div><div class="v">pha</div></div>
+    </div>
+    <p class="muted" style="margin-top:10px;">Tooltips: ObjectName, ApproachDate, Distance_LD, Velocity_kms. Visual-level filter keeps Distance_LD ≤ 5 LD to keep the plot legible.</p>
+  </div>
+
+  <div class="panel">
+    <h2>What-If Parameter</h2>
+    <p class="muted"><strong>LD Threshold</strong> — Numeric Range, Min 0.5, Max 20, Increment 0.5, Default 5. Drives the measure below and its own slider + card visual on the page.</p>
+    <pre style="color:#e8edf7; background:#0b1220; padding:14px; border-radius:8px; overflow-x:auto;">
+Approaches Within Threshold =
+VAR Threshold = SELECTEDVALUE('LD Threshold'[LD Threshold], 5)
+RETURN CALCULATE([Total Approaches], FILTER(Fact_approaches, Fact_approaches[Distance_LD] <= Threshold))</pre>
+  </div>
+
+  <div class="panel">
+    <h2>Why this page matters</h2>
+    <p class="muted">Instead of a single static "close approach" definition, a viewer can drag the threshold slider and instantly see how many recorded approaches fall inside their own chosen distance — turning a fixed dataset into a live risk-framing tool.</p>
+  </div>
+</main>
+</body>
+</html>
