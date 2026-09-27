@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asteroid Characteristics</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2/plotly.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="page1.html">Overview</a>
+    <a href="page2.html">Explorer</a>
+    <a href="page3.html" class="active">Characteristics</a>
+    <a href="page4.html">Discovery</a>
+    <a href="page5.html">Data Quality</a>
+    <a href="page6.html">Asteroid Detail</a>
+  </nav>
+</header>
+<main>
+  <div class="grid-2">
+    <div class="panel">
+      <h2>Orbital Shape: Semi-Major Axis vs. Eccentricity</h2>
+      <div id="shapeChart" style="height:420px;"></div>
+    </div>
+    <div class="panel">
+      <h2>Orbit Class × Size Band (heatmap)</h2>
+      <div id="heatChart" style="height:420px;"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Top 10 Largest Known Asteroids</h2>
+    <table id="topTable" style="width:100%; border-collapse:collapse; font-size:14px;"></table>
+  </div>
+</main>
+<script src="js/page3.js"></script>
+</body>
+</html>

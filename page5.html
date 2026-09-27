@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Data Quality</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2/plotly.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="page4.html">Discovery & Monitoring</a>
+    <a href="page5.html" class="active">Data Quality</a>
+    <a href="page6.html">Asteroid Detail</a>
+  </nav>
+</header>
+<main>
+  <div class="controls panel">
+    <label>Filter by condition code (max):</label>
+    <input type="range" id="ccSlider" min="0" max="9" value="9">
+    <span id="ccValue">9 (all objects)</span>
+  </div>
+
+  <div class="kpi-row" id="kpis"></div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <h2>Objects by Condition Code</h2>
+      <div id="ccChart" style="height:360px;"></div>
+    </div>
+    <div class="panel">
+      <h2>Diameter Coverage by Orbit Class</h2>
+      <div id="coverageChart" style="height:360px;"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Observations vs. Observation Arc</h2>
+    <div class="controls">
+      <label>Color by:</label>
+      <select id="colorBy">
+        <option value="orbitclass">Orbit Class</option>
+        <option value="pha">Potentially Hazardous</option>
+        <option value="condition_code">Condition Code</option>
+      </select>
+    </div>
+    <div id="scatterChart" style="height:480px;"></div>
+  </div>
+</main>
+
+<script src="js/page5.js"></script>
+</body>
+</html>

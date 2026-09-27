@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asteroid Detail</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2/plotly.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="page4.html">Discovery & Monitoring</a>
+    <a href="page5.html">Data Quality</a>
+    <a href="page6.html" class="active">Asteroid Detail</a>
+  </nav>
+</header>
+<main>
+  <div class="panel" style="position:relative;">
+    <h2>Search for an Asteroid</h2>
+    <input type="text" id="searchBox" class="search-box" placeholder="Type a designation, e.g. 2021 PH27...">
+    <div id="searchResults" class="search-results"></div>
+  </div>
+
+  <div id="detailPanel" style="display:none;">
+    <div class="panel">
+      <h2 id="detailName">—</h2>
+      <div class="detail-grid" id="detailGrid"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Close Approach History</h2>
+      <div id="historyChart" style="height:400px;"></div>
+    </div>
+  </div>
+
+  <div class="panel" id="emptyState">
+    <p class="muted">Search for an asteroid by its designation above (e.g. "2021 PH27" or "2024 ON") to see its full profile and approach history.</p>
+  </div>
+</main>
+
+<script src="js/page6.js"></script>
+</body>
+</html>

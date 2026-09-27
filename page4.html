@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Discovery & Monitoring</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2/plotly.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="page4.html" class="active">Discovery & Monitoring</a>
+    <a href="page5.html">Data Quality</a>
+    <a href="page6.html">Asteroid Detail</a>
+  </nav>
+</header>
+<main>
+  <div class="kpi-row" id="kpis"></div>
+
+  <div class="panel">
+    <h2>Discoveries by Year & Survey</h2>
+    <div class="controls">
+      <label>Surveys shown:</label>
+      <span class="muted">Click a legend entry to toggle it on/off. Drag the range slider below the chart to scrub through years.</span>
+    </div>
+    <div id="barChart" style="height:440px;"></div>
+  </div>
+
+  <div class="panel">
+    <h2>Cumulative Known Discoveries Over Time</h2>
+    <div id="lineChart" style="height:380px;"></div>
+  </div>
+</main>
+
+<script src="js/page4.js"></script>
+</body>
+</html>

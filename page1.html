@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Overview</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2/plotly.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>☄️ Planetary Defense Dashboard</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="page1.html" class="active">Overview</a>
+    <a href="page2.html">Explorer</a>
+    <a href="page3.html">Characteristics</a>
+    <a href="page4.html">Discovery</a>
+    <a href="page5.html">Data Quality</a>
+    <a href="page6.html">Asteroid Detail</a>
+  </nav>
+</header>
+<main>
+  <div class="controls panel">
+    <label>Orbit Class:</label>
+    <select id="classFilter"><option value="all">All</option></select>
+    <label style="margin-left:20px;">Min Year:</label>
+    <select id="yearFilter"><option value="all">All</option></select>
+  </div>
+
+  <div class="kpi-row" id="kpis"></div>
+
+  <div class="grid-2">
+    <div class="panel">
+      <h2>Close Approaches by Year</h2>
+      <div id="lineChart" style="height:340px;"></div>
+    </div>
+    <div class="panel">
+      <h2>Approaches by Orbit Class</h2>
+      <div id="barChart" style="height:340px;"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>PHA vs Non-PHA</h2>
+    <div id="donutChart" style="height:360px;"></div>
+  </div>
+</main>
+<script src="js/page1.js"></script>
+</body>
+</html>
